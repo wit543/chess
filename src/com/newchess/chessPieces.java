@@ -5,6 +5,7 @@ import java.util.List;
 
 public class chessPieces {
 	int[] characteristic= new int[3];
+	String icon;// two option for initialize 1)input in board 2) use if else and get input from  [2]
 	List<String> characteristics = new ArrayList<String>();
 	/*
 	 * [0] = x position
@@ -24,4 +25,5 @@ public class chessPieces {
 	int[] getcharacteristic(){		
 		return characteristic;
 	}
+
 }
