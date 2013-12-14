@@ -1,9 +1,10 @@
 package com.newchess;
 
+import java.io.IOException;
 import java.util.List;
 
-public class board extends chessPieces {
-	chessPieces[][] board = new chessPieces[8][8];
+public class board {
+	static chessPieces[][] board = new chessPieces[8][8];
 	
     chessPieces pw1 = new pawn(6,0,1,"♟");
 	chessPieces pw2 = new pawn(6,1,1,"♟");
@@ -22,14 +23,14 @@ public class board extends chessPieces {
 	chessPieces qw1 = new queen(7,3,1);
 	chessPieces kingw1 = new king(7,4,1);
 	
-	chessPieces pb1 = new pawn(1,0,0);
-	chessPieces pb2 = new pawn(1,1,0);
-	chessPieces pb3 = new pawn(1,2,0);
-	chessPieces pb4 = new pawn(1,3,0);
-	chessPieces pb5 = new pawn(1,4,0);
-	chessPieces pb6 = new pawn(1,5,0);
-	chessPieces pb7 = new pawn(1,6,0);
-	chessPieces pb8 = new pawn(1,7,0);
+	chessPieces pb1 = new pawn(1,0,0,"♙");
+	chessPieces pb2 = new pawn(1,1,0,"♙");
+	chessPieces pb3 = new pawn(1,2,0,"♙");
+	chessPieces pb4 = new pawn(1,3,0,"♙");
+	chessPieces pb5 = new pawn(1,4,0,"♙");
+	chessPieces pb6 = new pawn(1,5,0,"♙");
+	chessPieces pb7 = new pawn(1,6,0,"♙");
+	chessPieces pb8 = new pawn(1,7,0,"♙");
 	chessPieces rb1 = new rook(7,0,1);
 	chessPieces rb2 = new rook(7,7,1);
 	chessPieces bb1 = new bishop(0,1,0);
@@ -112,18 +113,19 @@ public class board extends chessPieces {
                 board[kingb1.characteristic[0]][kingb1.characteristic[1]] =kingb1;
                 
 	}
-	int[] getPosition(){	
-		int[] i = pw1.getcharacteristic();
+	int getPositionX(int Ix){	
+		/*int[] i = pw1.getcharacteristic();
  		System.out.println(i[0]);
- 		System.out.println(i[1]);
-		return pw1.getcharacteristic();
+ 		System.out.println(i[1]);*/
+		return pw1.getcharacteristic(Ix);
 	}
 	void setPosition(chessPieces p){
 		
-		boardGrid[p.characteristic[0]][p.characteristic[1]]= (board)p;
+		//boardGrid[p.characteristic[0]][p.characteristic[1]]= (board)p;
 	}
 	board[][] set(){
-		/*boardGrid[0][0]=(board) rb1;
+	/*
+		boardGrid[0][0]=(board) rb1;
 		boardGrid[0][1]=(board) kb1;
 		boardGrid[0][2]=(board) bb1;
 		boardGrid[0][3]=(board) qb1;
@@ -155,8 +157,17 @@ public class board extends chessPieces {
 		boardGrid[6][4]=(board) pw5;
 		boardGrid[6][5]=(board) pw6;
 		boardGrid[6][6]=(board) pw7;
-		boardGrid[6][7]=(board) pw8;*/
-		
+		boardGrid[6][7]=(board) pw8;
+		*/
 		return boardGrid;
+	}
+	public static void main(String[] args) throws IOException{
+		board bo = new board();
+		Render ren = new Render();
+		
+		bo.boardinitialize();
+		ren.render();
+			
+		
 	}
 }

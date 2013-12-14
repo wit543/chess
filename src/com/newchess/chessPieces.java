@@ -22,8 +22,8 @@ public class chessPieces {
 		characteristic[2] = z;
 	}
 	
-	int[] getcharacteristic(){		
-		return characteristic;
+	int getcharacteristic(int iX){		
+		return characteristic[iX];
 	}
-
+	
 }
