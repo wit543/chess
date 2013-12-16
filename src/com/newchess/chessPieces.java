@@ -25,5 +25,8 @@ public class chessPieces {
 	int getcharacteristic(int iX){		
 		return characteristic[iX];
 	}
+	void setcharacteristicSpace(String s){
+		icon = s;
+	}
 	
 }

@@ -3,6 +3,8 @@ package com.newchess;
 import java.io.IOException;
 import java.util.List;
 
+
+
 public class board {
 	static chessPieces[][] board = new chessPieces[8][8];
 	
@@ -14,14 +16,14 @@ public class board {
 	chessPieces pw6 = new pawn(6,5,1,"♟");
 	chessPieces pw7 = new pawn(6,6,1,"♟");
 	chessPieces pw8 = new pawn(6,7,1,"♟");
-	chessPieces rw1 = new rook(7,0,1);
-	chessPieces rw2 = new rook(7,7,1);
-	chessPieces bw1 = new bishop(7,1,1);
-	chessPieces bw2 = new bishop(7,6,1);
-	chessPieces kw1 = new knight(7,2,1);
-	chessPieces kw2 = new knight(7,5,1);
-	chessPieces qw1 = new queen(7,3,1);
-	chessPieces kingw1 = new king(7,4,1);
+	chessPieces rw1 = new rook(7,0,1,"♜");
+	chessPieces rw2 = new rook(7,7,1,"♜");
+	chessPieces bw1 = new bishop(7,1,1,"♝");
+	chessPieces bw2 = new bishop(7,6,1,"♝");
+	chessPieces kw1 = new knight(7,2,1,"♞");
+	chessPieces kw2 = new knight(7,5,1,"♞");
+	chessPieces qw1 = new queen(7,3,1,"♛");
+	chessPieces kingw1 = new king(7,4,1,"♚");
 	
 	chessPieces pb1 = new pawn(1,0,0,"♙");
 	chessPieces pb2 = new pawn(1,1,0,"♙");
@@ -31,15 +33,16 @@ public class board {
 	chessPieces pb6 = new pawn(1,5,0,"♙");
 	chessPieces pb7 = new pawn(1,6,0,"♙");
 	chessPieces pb8 = new pawn(1,7,0,"♙");
-	chessPieces rb1 = new rook(7,0,1);
-	chessPieces rb2 = new rook(7,7,1);
-	chessPieces bb1 = new bishop(0,1,0);
-	chessPieces bb2 = new bishop(0,6,0);
-	chessPieces kb1 = new knight(0,2,0);
-	chessPieces kb2 = new knight(0,5,0);
-	chessPieces qb1 = new queen(0,3,0);
-	chessPieces kingb1 = new king(0,4,0);
+	chessPieces rb1 = new rook(0,0,1,"♖");
+	chessPieces rb2 = new rook(0,7,1,"♖");
+	chessPieces bb1 = new bishop(0,1,0,"♗");
+	chessPieces bb2 = new bishop(0,6,0,"♗");
+	chessPieces kb1 = new knight(0,2,0,"♘");
+	chessPieces kb2 = new knight(0,5,0,"♘");
+	chessPieces qb1 = new queen(0,3,0,"♕");
+	chessPieces kingb1 = new king(0,4,0,"♔");
 	
+	chessPieces s= new space(" ");
 	
 	board[][] boardGrid = new board[8][8];
 	void boardinitialize() {
@@ -77,6 +80,11 @@ public class board {
 		bw2.setcharacteristic(7,5,1);
 		qw1.setcharacteristic(7,3,1);
 		kingw1.setcharacteristic(7,4,1);*/
+		for(int i=0;i<8;i++){
+			for(int j=0;j<8;j++){
+				board[i][j] =s;
+			}
+		}
                 
                 board[pw1.characteristic[0]][pw1.characteristic[1]] =pw1;
                 board[pw2.characteristic[0]][pw2.characteristic[1]] =pw2;
