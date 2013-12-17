@@ -14,7 +14,6 @@ public class knight extends chessPieces {
 	}
 	boolean logic(int IntfromX,int IntfromY,int InttoX,int InttoY){
 		
-		space s= new space();
 		boolean output= false;
 		if(((board.board[IntfromX][IntfromY].characteristic[2]==0)&&(board.board[InttoX][InttoY].characteristic[2]==0))||((board.board[IntfromX][IntfromY].characteristic[2]==1)&&(board.board[InttoX][InttoY].characteristic[2]==1))){
 		}

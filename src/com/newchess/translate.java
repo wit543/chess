@@ -1,6 +1,5 @@
 package com.newchess;
 
-import com.chessGame.chessTranslator;
 
 public class translate {
 	 int[] StringToCode(String Input){

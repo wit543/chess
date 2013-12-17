@@ -1,8 +1,5 @@
 package com.newchess;
 
-import com.chess.chess.chess;
-import com.chessGame.chessTranslator;
-import com.chessGame.grid;
 
 public class move {
 	public move(){

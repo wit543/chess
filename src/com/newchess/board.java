@@ -1,7 +1,7 @@
 package com.newchess;
 
 import java.io.IOException;
-import java.util.List;
+
 /*
  * IMPORTANT(MUST READ)
  * IF YOU CAN'T SEE THE CHESS
@@ -9,10 +9,11 @@ import java.util.List;
  * eclipse: Windows > Preferences > General > Workspaces, set "Text file encoding" to "Other : UTF-8"
  * 
  * 
- * 
+ * try but fail to not use static(use 1 static)
  * need to do list
  * update special move
  * check bug
+ * game end
  * */
 
 
