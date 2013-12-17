@@ -2,12 +2,23 @@ package com.newchess;
 
 import java.io.IOException;
 import java.util.List;
-
+/*
+ * IMPORTANT(MUST READ)
+ * IF YOU CAN'T SEE THE CHESS
+ * please UFT8 for encoding
+ * eclipse: Windows > Preferences > General > Workspaces, set "Text file encoding" to "Other : UTF-8"
+ * 
+ * 
+ * 
+ * need to do list
+ * update special move
+ * check bug
+ * */
 
 
 public class board {
-	static chessPieces[][] board = new chessPieces[8][8];
-	
+	static chessPieces[][] board = new chessPieces[9][8];
+	/*
     chessPieces pw1 = new pawn(6,0,1,"♟");
 	chessPieces pw2 = new pawn(6,1,1,"♟");
 	chessPieces pw3 = new pawn(6,2,1,"♟");
@@ -40,9 +51,47 @@ public class board {
 	chessPieces kb1 = new knight(0,2,0,"♘");
 	chessPieces kb2 = new knight(0,5,0,"♘");
 	chessPieces qb1 = new queen(0,3,0,"♕");
-	chessPieces kingb1 = new king(0,4,0,"♔");
+	chessPieces kingb1 = new king(0,4,0,"♔");*/
 	
-	chessPieces s= new space(" ");
+	
+	chessPieces pw1 = new pawn(1,0,1,"♟");
+	chessPieces pw2 = new pawn(1,1,1,"♟");
+	chessPieces pw3 = new pawn(1,2,1,"♟");
+	chessPieces pw4 = new pawn(1,3,1,"♟");
+	chessPieces pw5 = new pawn(1,4,1,"♟");
+	chessPieces pw6 = new pawn(1,5,1,"♟");
+	chessPieces pw7 = new pawn(1,6,1,"♟");
+	chessPieces pw8 = new pawn(1,7,1,"♟");
+	chessPieces rw1 = new rook(0,0,1,"♜");
+	chessPieces rw2 = new rook(0,7,1,"♜");
+	chessPieces bw1 = new bishop(0,1,1,"♝");
+	chessPieces bw2 = new bishop(0,6,1,"♝");
+	chessPieces kw1 = new knight(0,2,1,"♞");
+	chessPieces kw2 = new knight(0,5,1,"♞");
+	chessPieces qw1 = new queen(0,3,1,"♛");
+	chessPieces kingw1 = new king(0,4,1,"♚");
+	
+	chessPieces pb1 = new pawn(6,0,0,"♙");
+	chessPieces pb2 = new pawn(6,1,0,"♙");
+	chessPieces pb3 = new pawn(6,2,0,"♙");
+	chessPieces pb4 = new pawn(6,3,0,"♙");
+	chessPieces pb5 = new pawn(6,4,0,"♙");
+	chessPieces pb6 = new pawn(6,5,0,"♙");
+	chessPieces pb7 = new pawn(6,6,0,"♙");
+	chessPieces pb8 = new pawn(6,7,0,"♙");
+	chessPieces rb1 = new rook(7,0,1,"♖");
+	chessPieces rb2 = new rook(7,7,1,"♖");
+	chessPieces bb1 = new bishop(7,1,0,"♗");
+	chessPieces bb2 = new bishop(7,6,0,"♗");
+	chessPieces kb1 = new knight(7,2,0,"♘");
+	chessPieces kb2 = new knight(7,5,0,"♘");
+	chessPieces qb1 = new queen(7,3,0,"♕");
+	chessPieces kingb1 = new king(7,4,0,"♔");
+	
+	chessPieces white = new chessPieces();
+	chessPieces black = new chessPieces();
+	
+	chessPieces s= new space();
 	
 	board[][] boardGrid = new board[8][8];
 	void boardinitialize() {
@@ -169,12 +218,29 @@ public class board {
 		*/
 		return boardGrid;
 	}
+	void into(){
+		System.out.println("introduction to chess game");
+		System.out.println("==========================");
+		System.out.println("fornat = fromX/fromY toX/toY");
+		System.out.println("fromX/fromY\"space\"toX/toY");
+		System.out.println("example 2/a 3/a");
+	}
 	public static void main(String[] args) throws IOException{
 		board bo = new board();
 		Render ren = new Render();
+		Input i = new Input();
+		logic l = new logic();
+		move m = new move();
+		translate t = new translate();
 		
+		bo.into();
 		bo.boardinitialize();
 		ren.render();
+		int g=0;
+		while(g<1){
+			m.moveChess(l.test(t.StringToCode(i.getInput())));
+			ren.render();
+		}
 			
 		
 	}
