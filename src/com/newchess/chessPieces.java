@@ -10,7 +10,7 @@ public class chessPieces {
 	/*
 	 * [0] = x position
 	 * [1] = y position
-	 * [2] = color(0=black 1 = white)
+	 * [2] = color(1=black 0 = white)
 	 * [3] = type(
 	 * 				0=space
 	 * 				1=pawn

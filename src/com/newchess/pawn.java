@@ -18,24 +18,28 @@ public class pawn extends chessPieces {
 		
 		space s= new space();
 		boolean output= false;
+		//move 1 block
 		if((InttoX - IntfromX == 1)&&(board.board[InttoX][InttoY].icon==s.s)&&board.board[IntfromX][IntfromY].icon=="♟"&&(Math.abs(InttoY - IntfromY) ==0)){
 			if(((board.board[IntfromX][IntfromY].characteristic[2]==0)&&(board.board[InttoX][InttoY].characteristic[2]==0))||((board.board[IntfromX][IntfromY].characteristic[2]==1)&&(board.board[InttoX][InttoY].characteristic[2]==1))){
             }else{
             	output =true;                                
             }
 		}
+		//eat 1 block
         if((IntfromX -InttoX  == 1)&&(board.board[InttoX][InttoY].icon==s.s)&&board.board[IntfromX][IntfromY].icon=="♙"&&(Math.abs(InttoY - IntfromY) ==1)){
             if(((board.board[IntfromX][IntfromY].characteristic[2]==0)&&(board.board[InttoX][InttoY].characteristic[2] ==0))||((board.board[IntfromX][IntfromY].characteristic[2]==1)&&(board.board[InttoX][InttoY].characteristic[2]==1))){
             }else{
             	output =true;                                
             }
         }
-        if( (((InttoX == 3) && (IntfromX <3) && (board.board[IntfromX][IntfromY].icon=="♟"))||((InttoX == 4) && (IntfromX >4) && (board.board[IntfromX][IntfromY].icon=="♙")))&&(board.board[InttoX][InttoY].icon==s.s)){
+        //to 4 or 5
+        if(((((InttoX == 3) && (IntfromX <3) && (board.board[IntfromX][IntfromY].icon=="♟"))||((InttoX == 4) && (IntfromX >4) && (board.board[IntfromX][IntfromY].icon=="♙")))&&(board.board[InttoX][InttoY].icon==s.s))&&(Math.abs(InttoY - IntfromY) ==0)){
         	if(((board.board[IntfromX][IntfromY].characteristic[2]==0)&&(board.board[InttoX][InttoY].characteristic[2]==0))||((board.board[IntfromX][IntfromY].characteristic[2]==1)&&(board.board[InttoX][InttoY].characteristic[2]==1))){
         	}else{
         		output =true;
         	}
         }	
+        //left->right
         if( (Math.abs(InttoY - IntfromY) ==1)&&(board.board[InttoX][InttoY].icon != s.s)){
         	System.out.print(board.board[InttoX][InttoY]);
         		if(((board.board[IntfromX][IntfromY].characteristic[2]==0)&&(board.board[InttoX][InttoY].characteristic[2]==0))||((board.board[IntfromX][IntfromY].characteristic[2]==1)&&(board.board[InttoX][InttoY].characteristic[2]==1))){
@@ -43,14 +47,7 @@ public class pawn extends chessPieces {
         			output =true;
         	}
         }
-        if( (Math.abs(InttoY - IntfromY) ==1)&&(board.board[InttoX][InttoY].icon != s.s)){
-        	System.out.print(board.board[InttoX][InttoY]);
-        		if(((board.board[IntfromX][IntfromY].characteristic[2]==0)&&(board.board[InttoX][InttoY].characteristic[2]==0))||((board.board[IntfromX][IntfromY].characteristic[2]==1)&&(board.board[InttoX][InttoY].characteristic[2]==1))){
-        		}else{
-        			output =true;
-        	}
-        }
-	else{
+        else{
 	
 	}
 		

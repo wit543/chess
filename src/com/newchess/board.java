@@ -13,12 +13,12 @@ import java.io.IOException;
  * need to do list
  * update special move
  * check bug
- * game end
+ * change turn
  * */
 
 
 public class board {
-	static chessPieces[][] board = new chessPieces[9][8];
+	static chessPieces[][] board = new chessPieces[8][8];
 	/*
     chessPieces pw1 = new pawn(6,0,1,"♟");
 	chessPieces pw2 = new pawn(6,1,1,"♟");
@@ -233,6 +233,7 @@ public class board {
 		logic l = new logic();
 		move m = new move();
 		translate t = new translate();
+		check c = new check();
 		
 		bo.into();
 		bo.boardinitialize();
@@ -240,9 +241,12 @@ public class board {
 		int g=0;
 		while(g<1){
 			m.moveChess(l.test(t.StringToCode(i.getInput())));
-			ren.render();
+			ren.render();			
+			if(c.checkKing()==1){
+				break;
+			}
 		}
-			
+                
 		
 	}
 }

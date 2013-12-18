@@ -3,14 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/L:/New%20Folder%20(31)/New%20folder%20(2)/Chess/src/com/chessGame/chessMove.java</file>
-            <file>file:/L:/New%20Folder%20(31)/New%20folder%20(2)/Chess/src/com/chessGame/render.java</file>
-            <file>file:/L:/New%20Folder%20(31)/New%20folder%20(2)/Chess/src/com/chessGame/chessInput.java</file>
-            <file>file:/L:/New%20Folder%20(31)/New%20folder%20(2)/Chess/src/com/chessGame/main.java</file>
-            <file>file:/L:/New%20Folder%20(31)/New%20folder%20(2)/Chess/src/com/chess/chess/chess.java</file>
-            <file>file:/L:/New%20Folder%20(31)/New%20folder%20(2)/Chess/src/com/chessGame/check.java</file>
-            <file>file:/L:/New%20Folder%20(31)/New%20folder%20(2)/Chess/src/com/chessGame/chessTranslator.java</file>
-            <file>file:/L:/New%20Folder%20(31)/New%20folder%20(2)/Chess/src/com/chessGame/grid.java</file>
+            <file>file:/F:/New%20Folder%20(31)/New%20folder%20(2)/Chess/src/com/newchess/Render.java</file>
+            <file>file:/F:/New%20Folder%20(31)/New%20folder%20(2)/Chess/src/com/newchess/chessPieces.java</file>
+            <file>file:/F:/New%20Folder%20(31)/New%20folder%20(2)/Chess/src/com/newchess/board.java</file>
         </group>
     </open-files>
 </project-private>

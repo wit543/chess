@@ -19,5 +19,7 @@ public class move {
 		else{
 			System.out.println("invalid");
 		}
+		
+		
 	}
 }
